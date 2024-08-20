@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let sum = 0;
+    let numbersLength = +prompt("nhap vao do dai cua mang be hon 20")
+    for (let i = 0; i < numbersLength; i++) {
+        numbers[i] = +prompt("nhap phan tu trong mang");
+        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+            document.write(numbers[i] + "<br>");
+            sum += numbers[i];
+        }
+    }
+    document.write("Tổng các số là bội chung của 3 và 5 là: " + sum);
+
+</script>
+</body>
+</html>

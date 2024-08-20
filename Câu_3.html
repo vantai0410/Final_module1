@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Câu 3 </title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    let numbersLength = +prompt("nhap vao do dai cua mang nho hon 50")
+    for (let i = 0; i < numbersLength; i++) {
+        numbers[i] = +prompt("nhap phan tu trong mang");
+    }
+    function countNumber() {
+        let k = +prompt("nhap so k");
+        let dem = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            for (let j = i + 1; j < numbers.length; j++) {
+                 let tong = numbers[i] + numbers[j];
+                if (tong % k === 0) {
+                    dem++
+                }
+            }
+        }
+        return dem;
+    }
+    document.write("So cap thoa man la: " + countNumber());
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Câu 2 </title>
+</head>
+<body>
+<script>
+
+    function diemHocSinh(diem) {
+        if (diem < 0 || diem > 100) {
+            return "Nhap lai diem"
+        }
+        let soDu = diem % 5;
+
+        let khoangCach = 5 - soDu;
+        if (khoangCach < 3 && diem + khoangCach >= 50) {
+            diem = diem + khoangCach;
+        }
+
+        if (diem >= 50) {
+            alert(diem + " Đạt");
+        } else {
+            alert(diem + " không đạt");
+        }
+    }
+    let diemSo = +prompt("Nhap diem hoc sinh");
+    diemHocSinh(diemSo);
+
+</script>
+</body>
+</html>
